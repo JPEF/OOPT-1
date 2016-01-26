@@ -8,11 +8,11 @@ public class Rental {
 
     private Customer customer;
 
-    private Date start;
+    private Calendar start;
 
     private Calendar end;
 
-    public Rental(Car car, Customer customer, Date start, Calendar end) {
+    public Rental(Car car, Customer customer, Calendar start, Calendar end) {
         this.car = car;
         this.customer = customer;
         this.start = start;
@@ -21,7 +21,7 @@ public class Rental {
     
 
     public String toString() {
-        return this.car.getCarInfo() + " has been rented to " + this.customer.getCustomerInfo() + ". The rental period will start on " + this.start + " and end on ";
+        return this.car.getCarInfo() + " has been rented to " + this.customer.getCustomerInfo() + ". The rental period will start on " + this.start.getTime() + " and end on " + this.end.getTime();
     }
 
 }
